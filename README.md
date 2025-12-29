@@ -12,6 +12,8 @@
 
 [**查看演示**](#-系统演示-system-demo) | [**核心技术**](#-核心创新-key-innovations) | [**快速部署**](#-快速开始-quick-start)
 
+</div>
+
 ---
 
 ## 📖 项目背景 (Background)
@@ -59,22 +61,20 @@
 
 ```text
 NeuroGuard-Pro/
-├── 📂 code/
-│   ├── 🛠️ 数据工程 (Data Engineering)
-│   │   └── 00_process_data.py               # MNE 自动化流水线：滤波、去伪迹、切片
-│   ├── 🧠 模型算法库 (Model Zoo)
-│   │   ├── 10_run_lstm.py                   # Baseline: LSTM 时序依赖捕捉
-│   │   ├── 11_run_advanced_Strict.py        # Baseline: Transformer 自注意力机制
-│   │   ├── 12_run_dss_gcn_Strict.py         # Advanced: DSS-GCN 双流谱图卷积
-│   │   └── 15_run_contrastive_gcn_Strict.py # 🌟 Ours: CV-GCN (SOTA 核心算法)
-│   ├── 📊 评估与可视化 (Evaluation)
-│   │   └── 17_eval_final_summary.py         # 自动生成对比图表、混淆矩阵、脑地形图
-│   └── 🚀 部署端 (Deployment)
-│       └── 21_NeuroGuard_Pro_V7.1_AI.py     # Streamlit 医疗交互前端
-├── 📂 processed_data/                       # 标准化后的 .npz 张量数据
-├── 📂 results/                              # 训练日志、权重文件 (.pth) 及 评估报告
-└── 📄 README.md                             # 项目技术文档
+├── code/
+│   ├── 00_process_data.py               # MNE 数据预处理流水线
+│   ├── 10_run_lstm.py                   # Baseline: LSTM 模型
+│   ├── 11_run_advanced_Strict.py        # Baseline: Transformer 模型
+│   ├── 12_run_dss_gcn_Strict.py         # Advanced: DSS-GCN 双流模型
+│   ├── 15_run_contrastive_gcn_Strict.py # 🌟 Ours: CV-GCN (SOTA 核心算法)
+│   ├── 17_eval_final_summary.py         # 评估可视化与图表生成
+│   └── 21_NeuroGuard_Pro_V7.1_AI.py     # Streamlit 医疗交互前端
+├── processed_data/                      # 预处理后的标准 .npz 数据
+├── results/                             # 训练日志、模型权重 (.pth)
+└── README.md                            # 项目文档
 ```
+
+------
 
 ## 📊 性能基准 (Performance Benchmark)
 
@@ -172,4 +172,8 @@ streamlit run code/21_NeuroGuard_Pro_V7.1_AI.py
 
 ------
 
+<div align="center">
+
 **© 2025 NeuroGuard Pro Team.** *Exploring the Neural Mechanisms of Mental Health with AI.*
+
+</div>
