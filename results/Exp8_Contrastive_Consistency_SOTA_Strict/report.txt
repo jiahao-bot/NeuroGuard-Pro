@@ -1,0 +1,10 @@
+Experiment: Exp8_Contrastive_Consistency_SOTA
+Best Accuracy: 91.15%
+              precision    recall  f1-score   support
+
+           0     0.9144    0.9036    0.9089      1784
+           1     0.9089    0.9191    0.9139      1866
+
+    accuracy                         0.9115      3650
+   macro avg     0.9116    0.9113    0.9114      3650
+weighted avg     0.9115    0.9115    0.9115      3650
