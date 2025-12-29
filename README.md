@@ -4,13 +4,13 @@
 
 **基于跨视图一致性双流图神经网络 (CV-GCN) 的医疗级辅助决策系统**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://neuroguard-pro.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Status](https://img.shields.io/badge/Status-SOTA_Performance-success?style=for-the-badge)]()
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](./LICENSE)
 
-[**查看演示**](#-系统演示-system-demo) | [**核心技术**](#-核心创新-key-innovations) | [**快速部署**](#-快速开始-quick-start)
+[**🚀 点击在线体验 (Live Demo)**](https://neuroguard-pro.streamlit.app/) | [**核心技术**](#-核心创新-key-innovations) | [**快速部署**](#-快速开始-quick-start)
 
 </div>
 
@@ -74,8 +74,6 @@ NeuroGuard-Pro/
 └── README.md                            # 项目文档
 ```
 
-------
-
 ## 📊 性能基准 (Performance Benchmark)
 
 本项目采用最严苛的 **Leave-One-Group-Out (LOGO)** 跨被试评估协议（Strict Split），即测试集中的患者从未在训练集中出现过。
@@ -95,22 +93,30 @@ NeuroGuard-Pro/
 
 ## 🚀 快速开始 (Quick Start)
 
-### 1. 环境依赖
+### 方式一：在线体验 (推荐)
+
+无需安装任何环境，直接访问部署在云端的最新版本：
+
+👉 https://neuroguard-pro.streamlit.app/
+
+### 方式二：本地部署
+
+**1. 环境依赖**
 
 Bash
 
 ```
 # 克隆仓库
-git clone [https://github.com/jiahao-bot/depression_Graduation.git](https://github.com/jiahao-bot/depression_Graduation.git)
-cd depression_Graduation
+git clone [https://github.com/jiahao-bot/NeuroGuard-Pro.git](https://github.com/jiahao-bot/NeuroGuard-Pro.git)
+cd NeuroGuard-Pro
 
 # 安装核心依赖
 pip install numpy pandas torch torchvision scikit-learn matplotlib seaborn plotly mne streamlit
 ```
 
-### 2. 数据处理流水线
+2. 数据处理流水线
 
-将原始 `.edf` 文件放入 `dataset/` 目录，执行自动化清洗脚本：
+将原始 .edf 文件放入 dataset/ 目录，执行自动化清洗脚本：
 
 Bash
 
@@ -119,7 +125,7 @@ python code/00_process_data.py
 # 输出：processed_data/data_19ch.npz (已完成 Z-Score 标准化与切片)
 ```
 
-### 3. 模型训练 (复现 SOTA)
+3. 模型训练 (复现 SOTA)
 
 启动对比一致性图神经网络的训练过程：
 
@@ -130,7 +136,7 @@ python code/15_run_contrastive_gcn_Strict.py
 # 训练过程将自动保存最佳权重至 results/Exp8_Contrastive_Consistency_SOTA/
 ```
 
-### 4. 启动临床诊断系统
+4. 启动临床诊断系统
 
 一键启动 Web GUI 界面：
 
