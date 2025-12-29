@@ -74,6 +74,8 @@ NeuroGuard-Pro/
 └── README.md                            # 项目文档
 ```
 
+---
+
 ## 📊 性能基准 (Performance Benchmark)
 
 本项目采用最严苛的 **Leave-One-Group-Out (LOGO)** 跨被试评估协议（Strict Split），即测试集中的患者从未在训练集中出现过。
