@@ -2,3 +2,7 @@
 !.gitignore
 !code/
 !code/**
+
+# 新增这两行，允许根目录的 md 和 txt 文件
+!*.md
+!*.txt
