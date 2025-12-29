@@ -12,8 +12,6 @@
 
 [**查看演示**](#-系统演示-system-demo) | [**核心技术**](#-核心创新-key-innovations) | [**快速部署**](#-快速开始-quick-start)
 
-</div>
-
 ---
 
 ## 📖 项目背景 (Background)
@@ -21,6 +19,16 @@
 **NeuroGuard Pro** 是一个面向临床应用的脑电 (EEG) 智能分析框架。针对传统深度学习模型在**跨被试 (Cross-Subject)** 场景下泛化能力差的核心痛点，本项目提出了一种全新的 **CV-GCN (Cross-View Consistency Graph Convolutional Network)** 架构。
 
 该系统不仅仅是一个算法模型，更是一套**全栈式医疗 AI 解决方案**。它集成了从 EEG 信号预处理、特征工程、自监督图学习到可视化交互终端的完整流水线，旨在为医生提供可解释、高精度的抑郁症早期筛查辅助。
+
+---
+
+## 📚 数据集说明 (Dataset Information)
+
+本项目基于 **Figshare** 平台公开的抑郁症脑电数据集构建（数据总量约 **800MB**）。为确保评估结果具有临床泛化意义，我们制定了严格的数据协议：
+
+* **数据来源**: Figshare Public EEG Dataset (MDD vs. Healthy Controls).
+* **划分策略**: 采用严格的 **跨被试 (Subject-Independent)** 划分，确保训练集与测试集的受试者完全隔离，避免数据泄露。
+* **训练/测试比**: **6:4** (60% 受试者用于训练，40% 受试者用于独立测试)，以此模拟真实临床场景下的高难度诊断挑战。
 
 ---
 
@@ -153,7 +161,7 @@ streamlit run code/21_NeuroGuard_Pro_V7.1_AI.py
 
 ### 🎮 神经调控与评估 (Neuro-Feedback)
 
-- 集成 **Stroop Challenge** 范式，通过高交互性的颜色-语义冲突任务，定量评估患者的前扣带回 (ACC) 认知控制水平。
+- 集成 **Stroop 认知干扰训练** 范式，通过高交互性的颜色-语义冲突任务，定量评估患者的前扣带回 (ACC) 认知控制水平。
 
 ------
 
